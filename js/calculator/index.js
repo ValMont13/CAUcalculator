@@ -20,11 +20,11 @@ class Calculator {
     // List of actions
     get actionsMethods() {
         return [
-            { id: 'previous', name: 'previous', method: () => this.navigateToMemory(-1) },
-            { id: 'next', name: 'next', method: () => this.navigateToMemory(1) },
-            { id: 'remove', name: 'delete', method: () => this.removeLast() },
-            { id: 'reset', name: 'reset', method: () => this.input.value = '' },
-            { id: 'enter', name: 'enter', method: () => this.computeEval() }
+            { id: 'previous', name: 'long-arrow-alt-left', method: () => this.navigateToMemory(-1) },
+            { id: 'next', name: 'long-arrow-alt-right', method: () => this.navigateToMemory(1) },
+            { id: 'remove', name: 'backspace', method: () => this.removeLast() },
+            { id: 'reset', name: 'eraser', method: () => this.input.value = '' },
+            { id: 'enter', name: 'equals', method: () => this.computeEval() }
         ];
     }
 
@@ -69,7 +69,7 @@ class Calculator {
         this.symbolsMethods.forEach(s => this.symbols.innerHTML += '<div class="button" data-id="' + s.id + '">' + s.name + '</div>');
         this.symbolsMethods.forEach(s => this.symbols.querySelector('[data-id="' + s.id + '"]').addEventListener('click', s.method));
         this.actions = this.body.querySelector('.actions');
-        this.actionsMethods.forEach(a => this.actions.innerHTML += '<div class="button" data-id="' + a.id + '">' + a.name + '</div>');
+        this.actionsMethods.forEach(a => this.actions.innerHTML += '<div class="button" data-id="' + a.id + '"><i class="fas fa-' + a.name + '"></i></div>');
         this.actionsMethods.forEach(a => this.actions.querySelector('[data-id="' + a.id + '"]').addEventListener('click', a.method));
         this.digits = this.body.querySelector('.digits');
         this.digitsList.forEach(d => this.digits.innerHTML += '<div class="button digit" data-id="' + d + '">' + d + '</div>');
