@@ -1,0 +1,63 @@
+/* Calculator CSS */
+
+/* Container */
+
+.calculator-container {
+    padding: 2rem;
+    background-color: rgba(240, 240, 240, 1);
+    box-shadow: 0 0 3px 0 #0000004f;
+    transition: all 1s ease;
+}
+
+.calculator-container:hover {
+    background-color:#fafafa;;
+    box-shadow: 0 0 3px 0 #00000094;
+}
+
+/* Head */
+
+.calculator-container .calculator-head {
+    padding: 1rem;
+}
+
+.calculator-container .calculator-head input {
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    padding: 0.5rem;
+    background-color: white;
+    border: none;
+    box-shadow: 0 0 2px 0 grey;
+    width: 100%;
+}
+
+/* Body */
+
+.calculator-container .calculator-body {
+    padding: 1rem;
+}
+
+.calculator-container .calculator-body .actions, .calculator-container .calculator-body .digits, .calculator-container .calculator-body .symbols {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+/* Buttons */
+
+.calculator-container .button {
+    flex: 1;
+    cursor: pointer;
+    padding: 0.5rem;
+    text-align: center;
+    background-color: #dddd;
+    box-shadow: 0 0 1px 0 black;
+    transition: all 1s ease;
+}
+
+.calculator-container .button.digit {
+    flex-basis: 25%;
+}
+
+.calculator-container .button:hover {
+    background-color: rgba(240, 240, 240, 0.87);
+}

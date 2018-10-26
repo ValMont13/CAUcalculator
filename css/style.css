@@ -1,0 +1,31 @@
+/* Layouts */
+
+.layout {
+    display: flex;
+}
+
+.layout-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.layout-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.layout-vertical-align {
+    display: flex;
+    align-items: center;
+}
+
+.layout-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fullpage {
+    width: 100vw;
+    height: 100vh;
+}
